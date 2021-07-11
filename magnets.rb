@@ -1,11 +1,15 @@
 class Boat
-    def initialize(name, motor_type)
+    def initialize(name)
         @name = name
-        @motor_type = motor_type
     end
 end
 
 class PowerBoat < Boat
+
+    def initialize(name, motor_type)
+        super(name)
+        @motor_type = motor_type
+    end
 
     def info
         puts "Name: #{@name}"
